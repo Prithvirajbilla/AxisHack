@@ -20,5 +20,17 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    #Views
     url(r'^$', 'merchants.views.index'),
+    url(r'^details$', 'merchants.views.details'),
+    url(r'^declarations$', 'merchants.views.declarations'),
+    url(r'^confirmation$', 'merchants.views.confirmation'),
+    url(r'^getkit$', 'merchants.views.getkit'),
+    #validations urls
+    url(r'^validations/account$', 'merchants.validations.account_no'),
+    url(r'^validations/customer$', 'merchants.validations.customer_id'),
+    url(r'^validations/company$', 'merchants.validations.company_name'),
+    url(r'^validations/pincode$', 'merchants.validations.pincode'),
+    url(r'^validations/website$', 'merchants.validations.website'),
+    url(r'^validations/verify$', 'merchants.validations.verify'),
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
