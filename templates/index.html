@@ -2,12 +2,20 @@
 <body>
 
 <script>
-function slidefunction1(i,j){
+function slideDownfunction(i,j){
       $('#quest'+i).transition({
           animation:'fade down',
           duration:'0.5s',
           onComplete: function(){
         $       ('#quest'+j).transition({animation:'fade up',duration:'0.5s'});}
+      });
+    }
+function slideUpfunction(i,j){
+      $('#quest'+j).transition({
+          animation:'fade down',
+          duration:'0.5s',
+          onComplete: function(){
+        $       ('#quest'+i).transition({animation:'fade up',duration:'0.5s'});}
       });
     }
 </script>
@@ -24,7 +32,7 @@ function slidefunction1(i,j){
         Let's get started with the process for you to be able to use Axis Bank Payment Gateway.
       </h2>
       <h2><b>We promise to keep it short and simple..!</b></h2>
-      <div class="ui huge primary button" onclick="slidefunction1(1,2)">Get Started <i class="right arrow icon"></i></div>
+      <div class="ui huge primary button" onclick="slideDownfunction(1,2)">Get Started <i class="right arrow icon"></i></div>
     </div>
 
 <div class="ui text container" id="quest2" style="margin-top: 120px; display:none">
@@ -44,7 +52,8 @@ function slidefunction1(i,j){
       <h2><div class="ui input">
   <input type="text" placeholder="Eg 5432">
 </div></h2>
-      <div class="ui huge primary button" onclick="slidefunction1(2,3)">NEXT<i class="right arrow icon"></i></div>
+      <div class="ui huge primary button" onclick="slideUpfunction(1,2)"><i class="left arrow icon"></i>PREV</div>
+      <div class="ui huge primary button" onclick="slideDownfunction(2,3)">NEXT<i class="right arrow icon"></i></div>
     </div>2
  <div class="ui text container" id="quest4" style="margin-top: 120px; display:none">
     <div class="ui small image">
@@ -62,7 +71,7 @@ function slidefunction1(i,j){
       <h2><div class="ui input">
   <input type="text" placeholder="Eg Kapoor pvt lmtd....">
 </div></h2>
-      <div class="ui huge primary button" onclick="slidefunction1(4,5)">DONE <i class="right arrow icon"></i></div>
+      <div class="ui huge primary button" onclick="slideDownfunction(4,5)">DONE <i class="right arrow icon"></i></div>
     </div>
 
     <div class="ui text container" id="quest6" style="margin-top: 120px; display:none">
@@ -82,7 +91,7 @@ function slidefunction1(i,j){
       <h2><div class="ui input">
   <input type="text" placeholder="Eg 54321XXXXXXX...">
 </div></h2>
-      <div class="ui huge primary button" onclick="slidefunction1(6,7)">DONE <i class="right arrow icon"></i></div>
+      <div class="ui huge primary button" onclick="slideDownfunction(6,7)">DONE <i class="right arrow icon"></i></div>
     </div>
 
     <div class="ui text container" id="quest8" style="margin-top: 120px; display:none">
@@ -104,15 +113,15 @@ function slidefunction1(i,j){
   <input type="text" placeholder="Eg 54321XXXXXXX...">
 </div></h2>
 </div></h2>
-      <div class="ui huge primary button" onclick="slidefunction1(8,9)">DONE <i class="right arrow icon"></i></div>
+      <div class="ui huge primary button" onclick="slideDownfunction(8,9)">DONE <i class="right arrow icon"></i></div>
     </div>
 
  <div class="ui text container" id="quest9" style="margin-top: 120px; display:none">
     <div class="ui small image">
     <img src="/static/axis.jpg">
     </div>
-     
-      <div class="ui huge primary button" onclick="slidefunction1(9,10)">DONE <i class="right arrow icon"></i></div>
+
+      <div class="ui huge primary button" onclick="slideDownfunction(9,10)">DONE <i class="right arrow icon"></i></div>
     </div>
 
     <div class="ui text container" id="quest10" style="margin-top: 120px; display:none">
@@ -125,7 +134,7 @@ function slidefunction1(i,j){
       <h2><div class="ui input">
   <input type="text" placeholder="Eg 54321XXXXXXX...">
 </div></h2>
-      <div class="ui huge primary button" onclick="slidefunction1(10,11)">DONE <i class="right arrow icon"></i></div>
+      <div class="ui huge primary button" onclick="slideDownfunction(10,11)">DONE <i class="right arrow icon"></i></div>
     </div>
 
  <div class="ui text container" id="quest11" style="margin-top: 120px; display:none">
@@ -138,7 +147,7 @@ function slidefunction1(i,j){
       <h2><div class="ui input">
   <input type="text" placeholder="Eg 54321XXXXXXX...">
 </div></h2>
-      <div class="ui huge primary button" onclick="slidefunction1(11,12)">DONE <i class="right arrow icon"></i></div>
+      <div class="ui huge primary button" onclick="slideDownfunction(11,12)">DONE <i class="right arrow icon"></i></div>
     </div>
 
      <div class="ui text container" id="quest12" style="margin-top: 120px; display:none">
@@ -148,11 +157,11 @@ function slidefunction1(i,j){
       <h2 class="ui header">
         is this your personal account
       </h2>
-      <h2><button class="ui labeled icon button " onclick="slidefunction1(12,13)">
+      <h2><button class="ui labeled icon button " onclick="slideDownfunction(12,13)">
   <i class="pause icon"></i>
   yes
 </button>
-<button class="ui right labeled icon button" onclick="slidefunction1(12,13)">
+<button class="ui right labeled icon button" onclick="slideDownfunction(12,13)">
   <i class="right arrow icon"></i>
   no
 </button></h2>
@@ -165,23 +174,23 @@ function slidefunction1(i,j){
       <h2 class="ui header">
         What type of a business are you
       </h2>
-      <h2><button class="ui labeled icon button" onclick="slidefunction1(13,14)">
+      <h2><button class="ui labeled icon button" onclick="slideDownfunction(13,14)">
   <i class="pause icon"></i>
   Public company
 </button>
-<button class="ui right labeled icon button" onclick="slidefunction1(13,14)">
+<button class="ui right labeled icon button" onclick="slideDownfunction(13,14)">
   <i class="right arrow icon"></i>
   Private Company
 </button>
-<button class="ui right labeled icon button" onclick="slidefunction1(13,14)">
+<button class="ui right labeled icon button" onclick="slideDownfunction(13,14)">
   <i class="right arrow icon"></i>
   Government/Govt subsidised
 </button>
-<button class="ui right labeled icon button" onclick="slidefunction1(13,14)">
+<button class="ui right labeled icon button" onclick="slideDownfunction(13,14)">
   <i class="right arrow icon"></i>
   Individual Merchant
 </button>
-<button class="ui right labeled icon button" onclick="slidefunction1(13,14)">
+<button class="ui right labeled icon button" onclick="slideDownfunction(13,14)">
   <i class="right arrow icon"></i>
   Business Partners
 </button></h2>
