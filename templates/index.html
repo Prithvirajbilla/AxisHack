@@ -30,82 +30,146 @@ function isEmail(email) {
 <div class="pusher">
   <div class="ui vertical masthead center aligned segment" style="overflow:auto;">
 
-    <div class="ui text container" id="quest1" style="margin-top: 120px;">
+    <div class="ui text container" id="quest1" style="margin-top: 70px;">
     <div class="ui small image">
     <img src="/static/axis.jpg">
     </div>
-      <h2 class="ui header">
-        Let's get started with the process for you to be able to use Axis Bank Payment Gateway.
+      <h2 class="ui header" style="font-size:1.914rem">
+         Enable payments in your store using AxisBank Gyration (Merchant Onboarding in 3 Easy steps)
       </h2>
-      <h2><b>We promise to keep it short and simple..!</b></h2>
-      <div class="ui huge primary button" onclick="slideDownfunction(1,2)">Get Started <i class="right arrow icon"></i></div>
+      <h2><span style="color: #B2497D">Step 1</span> : <u>Basic information for any channel</u></h2>
+      <br/><br/><div class="ui medium primary button" onclick="slideDownfunction(1,2)">Get Started <i class="right arrow icon"></i></div>
     </div>
 
-<div class="ui text container" id="quest2" style="margin-top: 120px; display:none">
+<div class="ui text container" id="quest2" style="margin-top: 70px; display:none; font-weight:normal;">
     <div class="ui small image">
     <img src="/static/axis.jpg">
     </div>
       <h2 class="ui header">
-      1.&nbsp;&nbsp;What's Your Axis bank <b>Account number</b> ?
+      What's Your Axis bank <b><span style="color: #B2497D">Account number</span></b> ?
       </h2>
 
       <h2><div class="ui input">
   <input type="text" placeholder="Eg 54321XXXXXXX...">
 </div></h2>
 <h2 class="ui header">
-      2.&nbsp;&nbsp;And your <b>customer id</b> ?
+      And your <b><span style="color: #B2497D">customer id</span></b> ?
       </h2>
       <h2><div class="ui input">
   <input type="text" placeholder="Eg 5432">
 </div></h2>
-      <div class="ui huge primary button" onclick="slideUpfunction(1,2)"><i class="left arrow icon"></i>PREV</div>
-      <div class="ui huge primary button" onclick="slideDownfunction(2,4)">NEXT<i class="right arrow icon"></i></div>
+      <br/><br/><div class="ui medium primary button" onclick="slideUpfunction(1,2)"><i class="left arrow icon"></i>PREV</div>
+      <div class="ui medium primary button" onclick="slideDownfunction(2,3)">NEXT<i class="right arrow icon"></i></div>
     </div>
- <div class="ui text container" id="quest4" style="margin-top: 120px; display:none">
+
+     <div class="ui text container" id="quest3" style="margin-top: 70px; display:none;font-weight:normal;">
     <div class="ui small image">
     <img src="/static/axis.jpg">
     </div>
       <h2 class="ui header">
-      3.&nbsp;&nbsp;What's your <b>account name</b>  ?
+        Is this your <b><span style="color: #B2497D">personal</span></b> account ?
+      </h2>
+      <h2><button class="ui labeled icon button " onclick="slideDownfunction(3,4)">
+  <i class="check circle icon"></i>
+  yes
+</button>
+<button class="ui right labeled icon button" onclick="slideDownfunction(3,4)">
+  <i class="remove circle icon"></i>
+  no
+</button></h2>
+    </div>
+
+
+ <div class="ui text container" id="quest4" style="margin-top: 70px; display:none;font-weight:normal;">
+    <div class="ui small image">
+    <img src="/static/axis.jpg">
+    </div>
+      <h2 class="ui header">
+      What's your <b><span style="color: #B2497D">account name</span></b>  ?
       </h2>
       <h2><div class="ui input">
   <input type="text" placeholder="Eg Kapoor...">
 </div></h2>
  <h2 class="ui header">
-      4.&nbsp;&nbsp;On what name do you want to charge your customers ?
+      On what name do you want to charge your customers ?
       </h2>
       <h2><div class="ui input">
   <input type="text" placeholder="Eg Kapoor pvt lmtd....">
 </div></h2>
-      <div class="ui huge primary button" onclick="slideDownfunction(4,6)">DONE <i class="right arrow icon"></i></div>
+      <br/><br/>
+<div class="ui medium primary button" onclick="slideUpfunction(3,4)"><i class="left arrow icon"></i>PREV</div>
+      <div class="ui medium primary button" onclick="slideDownfunction(4,5)">NEXT <i class="right arrow icon"></i></div>
     </div>
 
-    <div class="ui text container" id="quest6" style="margin-top: 120px; display:none">
+ <div class="ui text container" id="quest5" style="margin-top: 70px; display:none;font-weight:normal;">
     <div class="ui small image">
     <img src="/static/axis.jpg">
     </div>
       <h2 class="ui header">
-      5.&nbsp;&nbsp;What is your business <b>address</b> ?
+      What <b><span style="color: #B2497D">type of a business</span></b> are you ?
       </h2>
-      <h2><div class="ui input">
+      <h2><button class="ui right labeled icon button" onclick="slideDownfunction(5,6)">
+  <i class="right arrow icon"></i>
+  Public Company
+</button>
+<button class="ui right labeled icon button" onclick="slideDownfunction(5,6)">
+  <i class="right arrow icon"></i>
+  Private Company
+</button>
+<button class="ui right labeled icon button" onclick="slideDownfunction(5,6)">
+  <i class="right arrow icon"></i>
+  Government/Govt subsidised
+</button>
+<button class="ui right labeled icon button" onclick="slideDownfunction(5,6)">
+  <i class="right arrow icon"></i>
+  Individual Merchant
+</button>
+<button class="ui right labeled icon button" onclick="slideDownfunction(5,6)">
+  <i class="right arrow icon"></i>
+  Business Partners
+</button></h2>
+    </div>
+
+
+    <div class="ui text container" id="quest6" style="margin-top: 70px; display:none;font-weight:normal;">
+    <div class="ui small image">
+    <img src="/static/axis.jpg">
+    </div>
+     <h2 class="ui header">
+      And what is your <b><span style="color: #B2497D">pincode</span></b> ?
+      </h2>
+      <div class="ui input">
   <input type="text" placeholder="Eg 54321XXXXXXX...">
-</div></h2>
+</div>
 <br/>
-  <h2 class="ui header">
-      6.&nbsp;&nbsp;And what is your <b>pincode</b> ?
+      <h2 class="ui header">
+      What's your <b><span style="color: #B2497D">address</span></b> ?
       </h2>
       <h2><div class="ui input">
   <input type="text" placeholder="Eg 54321XXXXXXX...">
 </div></h2>
-      <div class="ui huge primary button" onclick="slideDownfunction(6,8)">DONE <i class="right arrow icon"></i></div>
+ <h2 class="ui header">
+        Confirm your City and State.
+      </h2>
+      <h2><button class="ui labeled icon button " onclick="">
+  <i class="check circle icon"></i>
+  yes
+</button>
+<button class="ui right labeled icon button" onclick="">
+  <i class="remove circle icon"></i>
+  no
+</button></h2> 
+      <br/><br/>
+<div class="ui medium primary button" onclick="slideUpfunction(5,6)"><i class="left arrow icon"></i>PREV</div>
+      <div class="ui medium primary button" onclick="slideDownfunction(6,7)">NEXT <i class="right arrow icon"></i></div>
     </div>
 
-    <div class="ui text container" id="quest8" style="margin-top: 120px; display:none">
+    <div class="ui text container" id="quest7" style="margin-top: 70px; display:none;font-weight:normal;">
     <div class="ui small image">
     <img src="/static/axis.jpg">
     </div>
       <h2 class="ui header">
-      7.&nbsp;&nbsp; Your mobile number
+      Your <b><span style="color: #B2497D"> mobile number</span></b>
       </h2>
       <h2>
       <div class="ui left icon input">
@@ -114,93 +178,40 @@ function isEmail(email) {
 </div>
 </h2>
  <h2 class="ui header">
-      8.&nbsp;&nbsp; Your email address
+      Your <b><span style="color: #B2497D">email address</span></b>
       </h2>
       <h2><div class="ui input">
   <input type="text" id="email" placeholder="Eg 54321XXXXXXX...">
 </div></h2>
-      <div class="ui huge primary button" onclick="slideDownfunction(8,9);isEmail(document.getElementById('email').value)">DONE <i class="right arrow icon"></i></div>
+      <br/><br/>
+<div class="ui medium primary button" onclick="slideUpfunction(6,7)"><i class="left arrow icon"></i>PREV</div>
+      <div class="ui medium primary button" onclick="slideDownfunction(7,8);isEmail(document.getElementById('email').value)">NEXT <i class="right arrow icon"></i></div>
     </div>
 
- <div class="ui text container" id="quest9" style="margin-top: 120px; display:none">
-    <div class="ui small image">
-    <img src="/static/axis.jpg">
-    </div>
-
-      <div class="ui huge primary button" onclick="slideDownfunction(9,10)">DONE <i class="right arrow icon"></i></div>
-    </div>
-
-    <div class="ui text container" id="quest10" style="margin-top: 120px; display:none">
+    <div class="ui text container" id="quest8" style="margin-top: 70px; display:none;font-weight:normal;">
     <div class="ui small image">
     <img src="/static/axis.jpg">
     </div>
       <h2 class="ui header">
-        Payment website address
+    <b> Payment website address</b>
       </h2>
       <h2><div class="ui input">
   <input type="text" placeholder="Eg 54321XXXXXXX...">
 </div></h2>
-      <div class="ui huge primary button" onclick="slideDownfunction(10,11)">DONE <i class="right arrow icon"></i></div>
-    </div>
-
- <div class="ui text container" id="quest11" style="margin-top: 120px; display:none">
-    <div class="ui small image">
-    <img src="/static/axis.jpg">
-    </div>
-      <h2 class="ui header">
-        Return url
+ <h2 class="ui header">
+      <b> Return url</b>
       </h2>
       <h2><div class="ui input">
   <input type="text" placeholder="Eg 54321XXXXXXX...">
 </div></h2>
-      <div class="ui huge primary button" onclick="slideDownfunction(11,12)">DONE <i class="right arrow icon"></i></div>
+      <br/><br/>
+<div class="ui medium primary button" onclick="slideUpfunction(7,8)"><i class="left arrow icon"></i>PREV</div>
+      <div class="ui medium primary button" onclick="slideDownfunction(8,9)">NEXT <i class="right arrow icon"></i></div>
     </div>
 
-     <div class="ui text container" id="quest12" style="margin-top: 120px; display:none">
-    <div class="ui small image">
-    <img src="/static/axis.jpg">
-    </div>
-      <h2 class="ui header">
-        is this your personal account
-      </h2>
-      <h2><button class="ui labeled icon button " onclick="slideDownfunction(12,13)">
-  <i class="pause icon"></i>
-  yes
-</button>
-<button class="ui right labeled icon button" onclick="slideDownfunction(12,13)">
-  <i class="right arrow icon"></i>
-  no
-</button></h2>
-    </div>
+    
 
-     <div class="ui text container" id="quest13" style="margin-top: 120px; display:none">
-    <div class="ui small image">
-    <img src="/static/axis.jpg">
-    </div>
-      <h2 class="ui header">
-        What type of a business are you
-      </h2>
-      <h2><button class="ui labeled icon button" onclick="slideDownfunction(13,14)">
-  <i class="pause icon"></i>
-  Public company
-</button>
-<button class="ui right labeled icon button" onclick="slideDownfunction(13,14)">
-  <i class="right arrow icon"></i>
-  Private Company
-</button>
-<button class="ui right labeled icon button" onclick="slideDownfunction(13,14)">
-  <i class="right arrow icon"></i>
-  Government/Govt subsidised
-</button>
-<button class="ui right labeled icon button" onclick="slideDownfunction(13,14)">
-  <i class="right arrow icon"></i>
-  Individual Merchant
-</button>
-<button class="ui right labeled icon button" onclick="slideDownfunction(13,14)">
-  <i class="right arrow icon"></i>
-  Business Partners
-</button></h2>
-    </div>
+    
     </div>
 
 {% include "footer.html" %}
