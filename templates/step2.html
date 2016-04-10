@@ -18,6 +18,13 @@
           $       ('#quest'+i).transition({animation:'fade up',duration:'0.5s'});}
         });
       }
+function adddetails(){
+   var r= $('<div class="ui huge primary button" onclick="goder();">Declarations to be filled<i class="right arrow icon"></i></div>');
+   $('#quest2').append(r);
+}
+function goder(){
+  window.location = "declarations";
+}
 </script>
 
       <!-- Page Contents -->
@@ -33,7 +40,7 @@
             </h2>
             <div class="ui huge primary button" onclick="slideDownfunction(1,2)">Got it<i class="right arrow icon"></i></div>
           </div>
-          <div class="ui text container" id="quest2" style="margin-top: 120px; display:none">
+          <div class="ui text container" id="quest2" style="margin-top: 120px; display:none;">
             <div class="ui small image">
               <img src="/static/axis.jpg">
             </div>
@@ -50,8 +57,40 @@
   Internet Banking
 </button>
             </h2>
-            
           </div>
+
+          <div class="ui text container" id="quest3" style="margin-top: 120px; display:none;">
+            <div class="ui image">
+              <img src="/static/axis.jpg">
+            </div>
+             <h2 class="ui header">
+      When do u want to <b><span style="color: #B2497D">Start Testing </span></b>?
+      </h2>
+      
+ <div class="ui left icon small input">
+  <input type="text" placeholder="Choose a start date">
+   <i class="calendar icon"></i>
+</div>
+             <h2 class="ui header">
+      When do u want to <b><span style="color: #B2497D">Go Live </span></b>?
+      </h2>
+      
+ <div class="ui left icon small input">
+  <input type="text" placeholder="Choose a start date">
+   <i class="calendar icon"></i>
+</div>
+
+ <h2 class="ui header">
+      How many <b><span style="color: #B2497D">transactions</span></b> are you expecting per month ?
+      </h2>
+      <div class="ui small input">
+  <input type="text" placeholder="Eg 100 ">
+</div>
+<br/>
+<br/>
+            <div class="ui huge primary button" onclick="slideDownfunction(3,2);adddetails();">We Are Done Here<i class="right arrow icon"></i></div>
+          </div>
+
         </div>
       </div>
 
