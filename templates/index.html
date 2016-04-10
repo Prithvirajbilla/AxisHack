@@ -1,36 +1,13 @@
 {% include "header.html" %}
 <body>
 
-<script>
-function slideDownfunction(i,j){
-      $('#quest'+i).transition({
-          animation:'fade down',
-          duration:'0.5s',
-          onComplete: function(){
-        $       ('#quest'+j).transition({animation:'fade up',duration:'0.5s'});}
-      });
-    }
-function slideUpfunction(i,j){
-      $('#quest'+j).transition({
-          animation:'fade down',
-          duration:'0.5s',
-          onComplete: function(){
-        $       ('#quest'+i).transition({animation:'fade up',duration:'0.5s'});}
-      });
-    }
 
-function isEmail(email) {
-  var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-  return regex.test(email);
-}
-
-</script>
 
 <!-- Page Contents -->
 <div class="pusher">
   <div class="ui vertical masthead center aligned segment" style="overflow:auto;">
 
-    <div class="ui text container" id="quest1" style="margin-top: 70px;">
+    <div class="ui text container" id="quest1" style="margin-top: 80px;">
     <div class="ui small image">
     <img src="/static/axis.jpg">
     </div>
@@ -41,28 +18,27 @@ function isEmail(email) {
       <br/><br/><div class="ui medium primary button" onclick="slideDownfunction(1,2)">Get Started <i class="right arrow icon"></i></div>
     </div>
 
-<div class="ui text container" id="quest2" style="margin-top: 70px; display:none; font-weight:normal;">
+<div class="ui text container" id="quest2" style="margin-top: 80px; display:none; font-weight:normal;">
     <div class="ui small image">
     <img src="/static/axis.jpg">
     </div>
       <h2 class="ui header">
       What's Your Axis bank <b><span style="color: #B2497D">Account number</span></b> ?
       </h2>
-
-      <h2><div class="ui input">
+      <div class="ui small input">
   <input type="text" placeholder="Eg 54321XXXXXXX...">
-</div></h2>
+</div>
 <h2 class="ui header">
       And your <b><span style="color: #B2497D">customer id</span></b> ?
       </h2>
-      <h2><div class="ui input">
+      <div class="ui small input">
   <input type="text" placeholder="Eg 5432">
-</div></h2>
+</div>
       <br/><br/><div class="ui medium primary button" onclick="slideUpfunction(1,2)"><i class="left arrow icon"></i>PREV</div>
       <div class="ui medium primary button" onclick="slideDownfunction(2,3)">NEXT<i class="right arrow icon"></i></div>
     </div>
 
-     <div class="ui text container" id="quest3" style="margin-top: 70px; display:none;font-weight:normal;">
+     <div class="ui text container" id="quest3" style="margin-top: 80px; display:none;font-weight:normal;">
     <div class="ui small image">
     <img src="/static/axis.jpg">
     </div>
@@ -80,28 +56,28 @@ function isEmail(email) {
     </div>
 
 
- <div class="ui text container" id="quest4" style="margin-top: 70px; display:none;font-weight:normal;">
+ <div class="ui text container" id="quest4" style="margin-top: 80px; display:none;font-weight:normal;">
     <div class="ui small image">
     <img src="/static/axis.jpg">
     </div>
       <h2 class="ui header">
       What's your <b><span style="color: #B2497D">account name</span></b>  ?
       </h2>
-      <h2><div class="ui input">
+      <div class="ui small input">
   <input type="text" placeholder="Eg Kapoor...">
-</div></h2>
+</div>
  <h2 class="ui header">
       On what name do you want to charge your customers ?
       </h2>
-      <h2><div class="ui input">
+      <div class="ui small input">
   <input type="text" placeholder="Eg Kapoor pvt lmtd....">
-</div></h2>
+</div>
       <br/><br/>
 <div class="ui medium primary button" onclick="slideUpfunction(3,4)"><i class="left arrow icon"></i>PREV</div>
       <div class="ui medium primary button" onclick="slideDownfunction(4,5)">NEXT <i class="right arrow icon"></i></div>
     </div>
 
- <div class="ui text container" id="quest5" style="margin-top: 70px; display:none;font-weight:normal;">
+ <div class="ui text container" id="quest5" style="margin-top: 80px; display:none;font-weight:normal;">
     <div class="ui small image">
     <img src="/static/axis.jpg">
     </div>
@@ -131,79 +107,69 @@ function isEmail(email) {
     </div>
 
 
-    <div class="ui text container" id="quest6" style="margin-top: 70px; display:none;font-weight:normal;">
+    <div class="ui text container" id="quest6" style="margin-top: 80px; display:none; font-weight:normal;">
     <div class="ui small image">
     <img src="/static/axis.jpg">
     </div>
      <h2 class="ui header">
       And what is your <b><span style="color: #B2497D">pincode</span></b> ?
       </h2>
-      <div class="ui input">
+      <div class="ui small input">
   <input type="text" placeholder="Eg 54321XXXXXXX...">
 </div>
 <br/>
       <h2 class="ui header">
       What's your <b><span style="color: #B2497D">address</span></b> ?
       </h2>
-      <h2><div class="ui input">
+      <div class="ui small input">
   <input type="text" placeholder="Eg 54321XXXXXXX...">
-</div></h2>
- <h2 class="ui header">
-        Confirm your City and State.
-      </h2>
-      <h2><button class="ui labeled icon button " onclick="">
-  <i class="check circle icon"></i>
-  yes
-</button>
-<button class="ui right labeled icon button" onclick="">
-  <i class="remove circle icon"></i>
-  no
-</button></h2> 
+</div>
+
       <br/><br/>
 <div class="ui medium primary button" onclick="slideUpfunction(5,6)"><i class="left arrow icon"></i>PREV</div>
-      <div class="ui medium primary button" onclick="slideDownfunction(6,7)">NEXT <i class="right arrow icon"></i></div>
+      <div class="ui medium primary button" onclick="slideDownfunction(6,7);showModal()">NEXT <i class="right arrow icon"></i></div>
     </div>
 
-    <div class="ui text container" id="quest7" style="margin-top: 70px; display:none;font-weight:normal;">
+    <div class="ui text container" id="quest7" style="margin-top: 80px; display:none;font-weight:normal;">
     <div class="ui small image">
     <img src="/static/axis.jpg">
     </div>
       <h2 class="ui header">
       Your <b><span style="color: #B2497D"> mobile number</span></b>
       </h2>
-      <h2>
-      <div class="ui left icon input">
+      
+      <div class="ui left icon small input">
   <input type="text" placeholder="Eg 54321XXXXXXX...">
    <i class="phone square icon"></i>
 </div>
-</h2>
+
  <h2 class="ui header">
       Your <b><span style="color: #B2497D">email address</span></b>
       </h2>
-      <h2><div class="ui input">
+      <div class="ui small input">
   <input type="text" id="email" placeholder="Eg 54321XXXXXXX...">
-</div></h2>
+</div>
       <br/><br/>
 <div class="ui medium primary button" onclick="slideUpfunction(6,7)"><i class="left arrow icon"></i>PREV</div>
       <div class="ui medium primary button" onclick="slideDownfunction(7,8);isEmail(document.getElementById('email').value)">NEXT <i class="right arrow icon"></i></div>
     </div>
 
-    <div class="ui text container" id="quest8" style="margin-top: 70px; display:none;font-weight:normal;">
+    <div class="ui text container" id="quest8" style="margin-top: 80px; display:none;font-weight:normal;">
     <div class="ui small image">
     <img src="/static/axis.jpg">
     </div>
       <h2 class="ui header">
     <b> Payment website address</b>
       </h2>
-      <h2><div class="ui input">
+      <div class="ui small input">
   <input type="text" placeholder="Eg 54321XXXXXXX...">
-</div></h2>
+</div>
  <h2 class="ui header">
       <b> Return url</b>
       </h2>
-      <h2><div class="ui input">
+      <div class="ui small input">
   <input type="text" placeholder="Eg 54321XXXXXXX...">
-</div></h2>
+</div>
       <br/><br/>
 <div class="ui medium primary button" onclick="slideUpfunction(7,8)"><i class="left arrow icon"></i>PREV</div>
       <div class="ui medium primary button" onclick="slideDownfunction(8,9)">NEXT <i class="right arrow icon"></i></div>
@@ -217,7 +183,57 @@ function isEmail(email) {
 {% include "footer.html" %}
 
 </div>
+<div class="ui basic small modal" >
+  <i class="close icon"></i>
+  <div class="header">
+    Confirm your City and State.
+  </div>
+  <div class="image content">
+    <div class="description">
+      <p>city=x state=y</p>
+    </div>
+  </div>
+  <div class="actions">
+    <button class="ui labeled icon button " onclick="hideModal();">
+  <i class="check circle icon"></i>
+  yes
+</button>
+<button class="ui right labeled icon button" onclick="hideModal();">
+  <i class="remove circle icon"></i>
+  no
+</button>
+  </div>
+</div>
 
+<script>
+function slideDownfunction(i,j){
+      $('#quest'+i).transition({
+          animation:'fade down',
+          duration:'0.5s',
+          onComplete: function(){
+        $       ('#quest'+j).transition({animation:'fade up',duration:'0.5s'});}
+      });
+    }
+function slideUpfunction(i,j){
+      $('#quest'+j).transition({
+          animation:'fade down',
+          duration:'0.5s',
+          onComplete: function(){
+        $       ('#quest'+i).transition({animation:'fade up',duration:'0.5s'});}
+      });
+    }
+
+function isEmail(email) {
+  var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+  return regex.test(email);
+}
+
+function showModal(){
+  $('.ui.basic.small.modal').modal('show');
+}
+function hideModal(){
+  $('.ui.basic.small.modal').modal('hide');
+}
+</script>
 </body>
-
 </html>
