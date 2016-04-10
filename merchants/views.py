@@ -12,17 +12,17 @@ def index(request):
 	return render(request,template)
 
 def details(request):
-	template = "index.html"
+	template = "step2.html"
 	return render(request,template)
 
 def declarations(request):
-	template = "index.html"
+	template = "declarations.html"
 	return render(request,template)
 
 def confirmation(request):
-	template = "index.html"
+	template = "confirmation.html"
 	return render(request,template)
 
 def getkit(request):
-	template = "index.html"
+	template = "download.html"
 	return render(request,template)
