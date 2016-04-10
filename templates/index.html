@@ -2,62 +2,14 @@
 <body>
 
 <script>
-function slidefunction1(i){
-  if(i ==0){
-  $('#quest1').transition('fade up');
-$('#quest2').show();
-}
-else if (i==1){
- $('#quest2').transition('fade up');
-$('#quest3').show();
-}
-else if (i==2){
- $('#quest3').transition('fade up');
-$('#quest4').show();
-}
-else if (i==4){
- $('#quest4').transition('fade up');
-$('#quest5').show();
-}
-else if (i==5){
- $('#quest5').transition('fade up');
-$('#quest6').show();
-}
-else if (i==6){
- $('#quest6').transition('fade up');
-$('#quest7').show();
-}
-else if (i==7){
- $('#quest7').transition('fade up');
-$('#quest8').show();
-}
-else if (i==8){
- $('#quest8').transition('fade up');
-$('#quest9').show();
-}
-else if (i==9){
- $('#quest9').transition('fade up');
-$('#quest10').show();
-}
-else if (i==10){
- $('#quest10').transition('fade up');
-$('#quest11').show();
-}
-else if (i==11){
- $('#quest11').transition('fade up');
-$('#quest12').show();
-}
-else if (i==12){
- $('#quest12').transition('fade up');
-$('#quest13').show();
-}
-else if (i==13){
- $('#quest13').transition('fade up');
-$('#quest14').show();
-}
-
-
-}
+function slidefunction1(i,j){
+      $('#quest'+i).transition({
+          animation:'fade down',
+          duration:'0.5s',
+          onComplete: function(){
+        $       ('#quest'+j).transition({animation:'fade up',duration:'0.5s'});}
+      });
+    }
 </script>
 
 <!-- Page Contents -->
@@ -72,15 +24,15 @@ $('#quest14').show();
         Let's get started with the process for you to be able to use Axis Bank Payment Gateway.
       </h2>
       <h2><b>We promise to keep it short and simple..!</b></h2>
-      <div class="ui huge primary button" onclick="slidefunction1(0)">Get Started <i class="right arrow icon"></i></div>
+      <div class="ui huge primary button" onclick="slidefunction1(1,2)">Get Started <i class="right arrow icon"></i></div>
     </div>
-    
+
 <div class="ui text container" id="quest2" style="margin-top: 120px; display:none">
     <div class="ui small image">
     <img src="/static/axis.jpg">
     </div>
       <h2 class="ui header">
-      1.&nbsp;&nbsp;What's Your Axis bank Account number ?    
+      1.&nbsp;&nbsp;What's Your Axis bank Account number ?
       </h2>
 
       <h2><div class="ui input">
@@ -92,34 +44,33 @@ $('#quest14').show();
       <h2><div class="ui input">
   <input type="text" placeholder="Eg 5432">
 </div></h2>
-      <div class="ui huge primary button" onclick="slidefunction1(1)">NEXT<i class="right arrow icon"></i></div>
-    </div>  
-
+      <div class="ui huge primary button" onclick="slidefunction1(2,3)">NEXT<i class="right arrow icon"></i></div>
+    </div>2
  <div class="ui text container" id="quest4" style="margin-top: 120px; display:none">
     <div class="ui small image">
     <img src="/static/axis.jpg">
     </div>
       <h2 class="ui header">
-      3.&nbsp;&nbsp;What's your account name  ?  
+      3.&nbsp;&nbsp;What's your account name  ?
       </h2>
       <h2><div class="ui input">
   <input type="text" placeholder="Eg Kapoor...">
 </div></h2>
  <h2 class="ui header">
-        On what name do you want to charge your customers ?   
+        On what name do you want to charge your customers ?
       </h2>
       <h2><div class="ui input">
   <input type="text" placeholder="Eg Kapoor pvt lmtd....">
 </div></h2>
-      <div class="ui huge primary button" onclick="slidefunction1(4)">DONE <i class="right arrow icon"></i></div>
+      <div class="ui huge primary button" onclick="slidefunction1(4,5)">DONE <i class="right arrow icon"></i></div>
     </div>
 
     <div class="ui text container" id="quest5" style="margin-top: 120px; display:none">
     <div class="ui small image">
     <img src="/static/axis.jpg">
     </div>
-     
-      <div class="ui huge primary button" onclick="slidefunction1(5)">DONE <i class="right arrow icon"></i></div>
+
+      <div class="ui huge primary button" onclick="slidefunction1(5,6)">DONE <i class="right arrow icon"></i></div>
     </div>
 
     <div class="ui text container" id="quest6" style="margin-top: 120px; display:none">
@@ -127,12 +78,12 @@ $('#quest14').show();
     <img src="/static/axis.jpg">
     </div>
       <h2 class="ui header">
-        Your business address        
+        Your business address
       </h2>
       <h2><div class="ui input">
   <input type="text" placeholder="Eg 54321XXXXXXX...">
 </div></h2>
-      <div class="ui huge primary button" onclick="slidefunction1(6)">DONE <i class="right arrow icon"></i></div>
+      <div class="ui huge primary button" onclick="slidefunction1(6,7)">DONE <i class="right arrow icon"></i></div>
     </div>
 
     <div class="ui text container" id="quest7" style="margin-top: 120px; display:none">
@@ -140,12 +91,12 @@ $('#quest14').show();
     <img src="/static/axis.jpg">
     </div>
       <h2 class="ui header">
-        Your pincode       
+        Your pincode
       </h2>
       <h2><div class="ui input">
   <input type="text" placeholder="Eg 54321XXXXXXX...">
 </div></h2>
-      <div class="ui huge primary button" onclick="slidefunction1(7)">DONE <i class="right arrow icon"></i></div>
+      <div class="ui huge primary button" onclick="slidefunction1(7,8)">DONE <i class="right arrow icon"></i></div>
     </div>
 
     <div class="ui text container" id="quest8" style="margin-top: 120px; display:none">
@@ -153,25 +104,25 @@ $('#quest14').show();
     <img src="/static/axis.jpg">
     </div>
       <h2 class="ui header">
-        Your mobile number       
+        Your mobile number
       </h2>
       <h2><div class="ui input">
   <input type="text" placeholder="Eg 54321XXXXXXX...">
 </div></h2>
-      <div class="ui huge primary button" onclick="slidefunction1(8)">DONE <i class="right arrow icon"></i></div>
+      <div class="ui huge primary button" onclick="slidefunction1(8,9)">DONE <i class="right arrow icon"></i></div>
     </div>
- 
+
  <div class="ui text container" id="quest9" style="margin-top: 120px; display:none">
     <div class="ui small image">
     <img src="/static/axis.jpg">
     </div>
       <h2 class="ui header">
-        Your email address       
+        Your email address
       </h2>
       <h2><div class="ui input">
   <input type="text" placeholder="Eg 54321XXXXXXX...">
 </div></h2>
-      <div class="ui huge primary button" onclick="slidefunction1(9)">DONE <i class="right arrow icon"></i></div>
+      <div class="ui huge primary button" onclick="slidefunction1(9,10)">DONE <i class="right arrow icon"></i></div>
     </div>
 
     <div class="ui text container" id="quest10" style="margin-top: 120px; display:none">
@@ -179,12 +130,12 @@ $('#quest14').show();
     <img src="/static/axis.jpg">
     </div>
       <h2 class="ui header">
-        Payment website address       
+        Payment website address
       </h2>
       <h2><div class="ui input">
   <input type="text" placeholder="Eg 54321XXXXXXX...">
 </div></h2>
-      <div class="ui huge primary button" onclick="slidefunction1(10)">DONE <i class="right arrow icon"></i></div>
+      <div class="ui huge primary button" onclick="slidefunction1(10,11)">DONE <i class="right arrow icon"></i></div>
     </div>
 
  <div class="ui text container" id="quest11" style="margin-top: 120px; display:none">
@@ -192,12 +143,12 @@ $('#quest14').show();
     <img src="/static/axis.jpg">
     </div>
       <h2 class="ui header">
-        Return url       
+        Return url
       </h2>
       <h2><div class="ui input">
   <input type="text" placeholder="Eg 54321XXXXXXX...">
 </div></h2>
-      <div class="ui huge primary button" onclick="slidefunction1(11)">DONE <i class="right arrow icon"></i></div>
+      <div class="ui huge primary button" onclick="slidefunction1(11,12)">DONE <i class="right arrow icon"></i></div>
     </div>
 
      <div class="ui text container" id="quest12" style="margin-top: 120px; display:none">
@@ -207,11 +158,11 @@ $('#quest14').show();
       <h2 class="ui header">
         is this your personal account
       </h2>
-      <h2><button class="ui labeled icon button " onclick="slidefunction1(12)">
+      <h2><button class="ui labeled icon button " onclick="slidefunction1(12,13)">
   <i class="pause icon"></i>
   yes
 </button>
-<button class="ui right labeled icon button" onclick="slidefunction1(12)">
+<button class="ui right labeled icon button" onclick="slidefunction1(12,13)">
   <i class="right arrow icon"></i>
   no
 </button></h2>
@@ -222,25 +173,25 @@ $('#quest14').show();
     <img src="/static/axis.jpg">
     </div>
       <h2 class="ui header">
-        What type of a business are you       
+        What type of a business are you
       </h2>
-      <h2><button class="ui labeled icon button" onclick="slidefunction1(13)">
+      <h2><button class="ui labeled icon button" onclick="slidefunction1(13,14)">
   <i class="pause icon"></i>
   Public company
 </button>
-<button class="ui right labeled icon button" onclick="slidefunction1(13)">
+<button class="ui right labeled icon button" onclick="slidefunction1(13,14)">
   <i class="right arrow icon"></i>
   Private Company
 </button>
-<button class="ui right labeled icon button" onclick="slidefunction1(13)">
+<button class="ui right labeled icon button" onclick="slidefunction1(13,14)">
   <i class="right arrow icon"></i>
   Government/Govt subsidised
 </button>
-<button class="ui right labeled icon button" onclick="slidefunction1(13)">
+<button class="ui right labeled icon button" onclick="slidefunction1(13,14)">
   <i class="right arrow icon"></i>
   Individual Merchant
 </button>
-<button class="ui right labeled icon button" onclick="slidefunction1(13)">
+<button class="ui right labeled icon button" onclick="slidefunction1(13,14)">
   <i class="right arrow icon"></i>
   Business Partners
 </button></h2>
