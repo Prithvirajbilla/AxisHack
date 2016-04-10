@@ -45,7 +45,7 @@ def pincode(request):
 	if(pincode == ''):
 		return JsonResponse({})
 	suggestions = nameservice.get_pincode_details(pincode)
-	return JsonResponse({'sg':json.loads(suggestions)})
+	return JsonResponse(json.loads(suggestions))
 
 def website(request):
 	if request.method == 'POST':

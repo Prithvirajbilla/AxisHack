@@ -12,10 +12,24 @@
           },
           200: function(){
             alert("Website reached. Domain registration check successful");
-            slideDownfunction(8,9);
+            window.location.href = "/details";
           }
         }    });
   }
+
+  function validatePincode(){
+    name = $('#pincode').val()
+    $.ajax({
+    url:'/validations/pincode?q='+name,
+    method:'GET',
+    statusCode:{
+      200: function(data){
+          $('#pincode_data').html("City: Mumbai, State: Maharashtra");
+          showModal();
+      }
+    }
+  });
+}
   </script>
 <!-- Page Contents -->
 <div class="pusher">
@@ -115,7 +129,7 @@
       First we need a <b><span style="color: #B2497D">pincode</span></b>
       </h2>
       <div class="ui small input">
-  <input type="text" placeholder="Ex: 100001">
+  <input type="text" id='pincode' placeholder="Ex: 100001">
 </div>
 <br/>
       <h2 class="ui header">
@@ -127,7 +141,7 @@
 
       <br/><br/>
 <div class="ui medium primary button" onclick="slideUpfunction(5,6)"><i class="left arrow icon"></i>PREV</div>
-      <div class="ui medium primary button" onclick="slideDownfunction(6,7);showModal()">NEXT <i class="right arrow icon"></i></div>
+      <div class="ui medium primary button" onclick="validatePincode();">NEXT <i class="right arrow icon"></i></div>
     </div>
 
     <div class="ui text container" id="quest7" style="margin-top: 80px; display:none;font-weight:normal;">
@@ -169,11 +183,6 @@
       <div class="ui medium primary button" onclick="validateWeb()">NEXT <i class="right arrow icon"></i></div>
     </div>
 
-
-
-
-    </div>
-
 </div>
 <div class="ui basic small modal" >
   <i class="close icon"></i>
@@ -182,17 +191,17 @@
   </div>
   <div class="image content">
     <div class="description">
-      <p>city=x state=y</p>
+      <p id = 'pincode_data'></p>
     </div>
   </div>
   <div class="actions">
-    <button class="ui labeled icon button " onclick="hideModal();">
+    <button class="ui labeled icon button " onclick="hideModal();slideDownfunction(6,7)">
   <i class="check circle icon"></i>
-  yes
+  Yes
 </button>
 <button class="ui right labeled icon button" onclick="hideModal();">
   <i class="remove circle icon"></i>
-  no
+  No
 </button>
   </div>
 </div>
