@@ -1,0 +1,5 @@
+pyicap
+requests
+beautifulsoup4
+googleapiclient
+pyredis
