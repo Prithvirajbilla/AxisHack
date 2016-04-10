@@ -1,8 +1,22 @@
 {% include "header.html" %}
 <body>
-
-
-
+  <script>
+    function validateWeb(){
+      name = $('#website').val()
+      $.ajax({
+      url:'/validations/website?q='+name,
+      method:'GET',
+      statusCode: {
+          404: function() {
+            alert( "page not found" );
+          },
+          200: function(){
+            alert("Website reached. Domain registration check successful");
+            slideDownfunction(8,9);
+          }
+        }    });
+  }
+  </script>
 <!-- Page Contents -->
 <div class="pusher">
   <div class="ui vertical masthead center aligned segment" style="overflow:auto;">
@@ -142,7 +156,7 @@
     <b> Payment website address</b>
       </h2>
       <div class="ui small input">
-  <input type="text" placeholder="Your domain name goes here">
+  <input type="text" id='website' placeholder="Your domain name goes here">
 </div>
  <h2 class="ui header">
       <b> Return url</b>
@@ -152,7 +166,7 @@
 </div>
       <br/><br/>
 <div class="ui medium primary button" onclick="slideUpfunction(7,8)"><i class="left arrow icon"></i>PREV</div>
-      <div class="ui medium primary button" onclick="slideDownfunction(8,9)">NEXT <i class="right arrow icon"></i></div>
+      <div class="ui medium primary button" onclick="validateWeb()">NEXT <i class="right arrow icon"></i></div>
     </div>
 
 

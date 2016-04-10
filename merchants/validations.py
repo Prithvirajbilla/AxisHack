@@ -1,4 +1,5 @@
 from django.http import JsonResponse
+from django.http import HttpResponse
 import json
 import datetime
 import urllib
@@ -51,11 +52,12 @@ def website(request):
 		return JsonResponse({})
 	website = request.GET.get("q",'')
 	if(website == ''):
-		return JsonResponse({})
+		return HttpResponse(status=404)
 	try:
 		status = urllib.urlopen('http://'+website).getcode()
 	except IOError:
 		status = 404
+		return HttpResponse(status=status)
 	domain = whois(website)
 	return JsonResponse({'status':status,'name':domain.name,'registrar':domain.registrar,'created':domain.creation_date,'expiry':domain.expiration_date})
 
