@@ -18,6 +18,12 @@ function slideUpfunction(i,j){
         $       ('#quest'+i).transition({animation:'fade up',duration:'0.5s'});}
       });
     }
+
+function isEmail(email) {
+  var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+  return regex.test(email);
+}
+
 </script>
 
 <!-- Page Contents -->
@@ -53,8 +59,8 @@ function slideUpfunction(i,j){
   <input type="text" placeholder="Eg 5432">
 </div></h2>
       <div class="ui huge primary button" onclick="slideUpfunction(1,2)"><i class="left arrow icon"></i>PREV</div>
-      <div class="ui huge primary button" onclick="slideDownfunction(2,3)">NEXT<i class="right arrow icon"></i></div>
-    </div>2
+      <div class="ui huge primary button" onclick="slideDownfunction(2,4)">NEXT<i class="right arrow icon"></i></div>
+    </div>
  <div class="ui text container" id="quest4" style="margin-top: 120px; display:none">
     <div class="ui small image">
     <img src="/static/axis.jpg">
@@ -71,7 +77,7 @@ function slideUpfunction(i,j){
       <h2><div class="ui input">
   <input type="text" placeholder="Eg Kapoor pvt lmtd....">
 </div></h2>
-      <div class="ui huge primary button" onclick="slideDownfunction(4,5)">DONE <i class="right arrow icon"></i></div>
+      <div class="ui huge primary button" onclick="slideDownfunction(4,6)">DONE <i class="right arrow icon"></i></div>
     </div>
 
     <div class="ui text container" id="quest6" style="margin-top: 120px; display:none">
@@ -91,7 +97,7 @@ function slideUpfunction(i,j){
       <h2><div class="ui input">
   <input type="text" placeholder="Eg 54321XXXXXXX...">
 </div></h2>
-      <div class="ui huge primary button" onclick="slideDownfunction(6,7)">DONE <i class="right arrow icon"></i></div>
+      <div class="ui huge primary button" onclick="slideDownfunction(6,8)">DONE <i class="right arrow icon"></i></div>
     </div>
 
     <div class="ui text container" id="quest8" style="margin-top: 120px; display:none">
@@ -101,19 +107,19 @@ function slideUpfunction(i,j){
       <h2 class="ui header">
       7.&nbsp;&nbsp; Your mobile number
       </h2>
-      <h2><div class="ui input">
+      <h2>
       <div class="ui left icon input">
   <input type="text" placeholder="Eg 54321XXXXXXX...">
    <i class="phone square icon"></i>
 </div>
+</h2>
  <h2 class="ui header">
-        Your email address
+      8.&nbsp;&nbsp; Your email address
       </h2>
       <h2><div class="ui input">
-  <input type="text" placeholder="Eg 54321XXXXXXX...">
+  <input type="text" id="email" placeholder="Eg 54321XXXXXXX...">
 </div></h2>
-</div></h2>
-      <div class="ui huge primary button" onclick="slideDownfunction(8,9)">DONE <i class="right arrow icon"></i></div>
+      <div class="ui huge primary button" onclick="slideDownfunction(8,9);isEmail(document.getElementById('email').value)">DONE <i class="right arrow icon"></i></div>
     </div>
 
  <div class="ui text container" id="quest9" style="margin-top: 120px; display:none">
